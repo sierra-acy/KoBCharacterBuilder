@@ -1,7 +1,9 @@
 from fpdf import FPDF as fpdf
+from character import Character
 
 def main():
     """ main runner """
+    dummyChar = Character()
 
     pdf = fpdf(unit='in')
     pdf.add_page()
@@ -20,7 +22,7 @@ def main():
 
     # Trope Field
     pdf.set_font('Arial', '', 14)
-    pdf.cell(w=0, h=0.25, txt='Aloof Teacher', border=1, ln=1, align='L')
+    pdf.cell(w=0, h=0.25, txt=dummyChar.get_trope(), border=1, ln=1, align='L')
     
     # Output result
     pdf.output('output/charactersheet.pdf', 'F')
