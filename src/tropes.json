@@ -1,0 +1,18 @@
+{
+    "Aloof Teacher": { 
+        "FIGHT":"d4", 
+        "FLIGHT":"d20", 
+        "BRAINS":"d12",
+        "BRAWN":"d6",
+        "CHARM":"d8",
+        "GRIT":"d10"
+    },
+    "Bullheaded Muscle": {
+        "FIGHT":"d12", 
+        "FLIGHT":"d8", 
+        "BRAINS":"d6",
+        "BRAWN":"d20",
+        "CHARM":"d4",
+        "GRIT":"d10"
+    }
+}
