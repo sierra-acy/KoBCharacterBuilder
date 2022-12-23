@@ -11,7 +11,7 @@ function initTropeOptions() {
   let optionList = document.getElementById('tropes').options;
   Tropes.forEach(option =>
     optionList.add(
-      new Option(option.text, option.value)
+      new Option(option.text, option.value, selected=option.selected ? option.selected : false)
     )
   );
 }
