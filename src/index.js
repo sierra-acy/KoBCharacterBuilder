@@ -17,9 +17,6 @@ function initTropeOptions() {
 }
 
 function tropeSelect(selectedValue) {
-  if (selectedValue == 'no-choice') {
-    alert("Please choose a trope.");
-  }
   const tropeStatsData = TropeStats[selectedValue];
   Object.entries(tropeStatsData).forEach(([key, value]) => {
     let statField = document.getElementById(key);

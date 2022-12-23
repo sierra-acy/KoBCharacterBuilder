@@ -1,7 +1,7 @@
 const TropeOptions = [
     {
-        "text": "",
-        "value": "no-choice",
+        "text": "None",
+        "value": "none",
         "selected": true
     },
     {
@@ -15,7 +15,7 @@ const TropeOptions = [
 ];
 
 const TropeStats = {
-    "no-choice": {
+    "none": {
         "fight": "",
         "flight": "",
         "brains": "",
