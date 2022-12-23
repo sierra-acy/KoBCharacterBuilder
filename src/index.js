@@ -17,9 +17,16 @@ function initTropeOptions() {
 }
 
 function tropeSelect(selectedValue) {
-  const tropeStatsData = TropeStats[selectedValue];
-  Object.entries(tropeStatsData).forEach(([key, value]) => {
+  const tropeData = TropeStats[selectedValue];
+  const questionsField = document.getElementById("trope-questions");
+  let questionContent;
+  
+  Object.entries(tropeData["stats"]).forEach(([key, value]) => {
     let statField = document.getElementById(key);
     statField.value = value;
   });
+
+  questionContent = "";
+  tropeData["questions"].forEach(question => questionContent += question + "\n\n");
+  questionsField.value = questionContent;
 }
