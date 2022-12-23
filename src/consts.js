@@ -361,3 +361,82 @@ const TropeStats = {
         ]
     }
 }
+
+const YearOptions = [
+    {
+        "text": "N/A",
+        "value": "none"
+    },
+    {
+        "text": "First",
+        "value": "first",
+    },
+    {
+        "text": "Second",
+        "value": "second"
+    },
+    {
+        "text": "Third",
+        "value": "third"
+    },
+    {
+        "text": "Fourth",
+        "value": "fourth"
+    },
+    {
+        "text": "Fifth",
+        "value": "fifth"
+    },
+    {
+        "text": "Sixth",
+        "value": "sixth"
+    },
+    {
+        "text": "Seventh",
+        "value": "seventh"
+    },
+    {
+        "text": "Graduate/Adult",
+        "value": "adult"
+    }
+];
+
+const GradeCategories = {
+    "underclassman": {
+        "name": "Underclassman",
+        "years": ["first", "second", "third", "fourth"],
+        "strength": "Innocence",
+        "stats": {
+            "charm": "+1",
+            "fight": "+1"
+        }
+    },
+    "upperclassman": {
+        "name": "Upperclassman",
+        "years": ["fifth", "sixth", "seventh"],
+        "strength": "Trained in...",
+        "stats": {
+            "fight": "+1",
+            "brawn": "+1"
+        }
+    },
+    "faculty": {
+        "name": "Faculty",
+        "years":["adult"],
+        "strength":"Studied in...",
+        "stats": {
+            "brains": "+1",
+            "grit": "+1"
+        }
+    },
+    "none": {
+        "name": "None",
+        "strength":""
+    }
+};
+
+const Strengths = {
+    "Innocence": "Once per session at the GM's discretion, you may spend 2 AT to convince an adult to not get you in trouble for a minor transgression.",
+    "Trained in...": "Choose one type of magic. Gain +1 to all spells of that type.",
+    "Studied in...": "Choose a type of magic that you are already Trained in. Gain +3 to all spells of that type. This bonus is not cumulative with the bonus for the Trained in... strength."
+}

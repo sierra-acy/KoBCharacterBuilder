@@ -115,15 +115,7 @@
         <input type="number" id="age" name="age" size="10">
 
         <label for="year">Year:</label>
-        <select name="year" id="year" required>
-            <option value="first">First</option>
-            <option value="second">Second</option>
-            <option value="third">Third</option>
-            <option value="fourth">Fourth</option>
-            <option value="fifth">Fifth</option>
-            <option value="sixth">Sixth</option>
-            <option value="seventh">Seventh</option>
-            <option value="adult">Graduate/Adult</option>
+        <select name="year" id="year" required onchange="yearSelect(this.options[this.selectedIndex].value)">
         </select>
 
         <label for="grade-category">Grade Category:</label>
