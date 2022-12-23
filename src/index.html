@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kids On Brooms Character Sheet Builder</title>
+</head>
+<body>
+
+    <h1>Kids On Brooms Character Sheet Builder</h1>
+
+    <div id="details" class="section">
+        <h2>Details</h2>
+        <label for="tropes">Trope:</label>
+        <select name="tropes" id="tropes">
+            <option value="aloof-teacher">Aloof Teacher</option>
+            <option value="bullheaded-muscle">Bullheaded Muscle</option>
+        </select>
+        
+        <br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required size="10">
+
+        <label for="pronouns">Pronouns:</label>
+        <input type="text" id="pronouns" name="pronouns" required size="10">
+        
+        <br>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" size="10">
+
+        <label for="year">Year:</label>
+        <select name="year" id="year" required>
+            <option value="first">First</option>
+            <option value="second">Second</option>
+            <option value="third">Third</option>
+            <option value="fourth">Fourth</option>
+            <option value="fifth">Fifth</option>
+            <option value="sixth">Sixth</option>
+            <option value="seventh">Seventh</option>
+            <option value="adult">Graduate/Adult</option>
+        </select>
+
+        <label for="grade-category">Grade Category:</label>
+        <input type="text" id="grade-category" name="grade-category" size="10" required readonly>
+
+        <br>
+
+        <label for="fear">Fear:</label>
+        <textarea type="text" id="fear" name="fear" size="10" required></textarea>
+        
+        <br>
+
+        <label for="motivation">Motivation:</label>
+        <textarea type="text" id="motivation" name="motivation" size="10" required></textarea>
+
+        <br>
+
+        <label for="description">Description:</label>
+        <textarea type="text" id="description" name="description" size="10"></textarea>
+
+        <div id="broom-section" class="subsection">
+            <h3>Broom</h3>
+            <label for="brooms">Name:</label>
+            <select name="brooms" id="brooms">
+                <option value="blockers-broom">The Blocker's Broom - Defensive</option>
+                <option value="bolting-4000">Bolting 4000 - Fast</option>
+            </select>
+
+            <br>
+
+            <label for="broom-benefit">Mechanical Benefit:</label>
+            <input type="text" id="broom-benefit" name="broom-benefit" size="10" readonly>
+
+            <br>
+
+            <label for="broom-look">Look:</label>
+            <input type="text" id="broom-look" name="broom-look" size="10">
+        </div>
+
+        <div id="wand-section" class="subsection">
+            <h3>Wand</h3>
+            <label for="wand-wood">Wood:</label>
+            <input type="text" id="wand-wood" name="wand-wood" size="10" required>
+
+            <label for="wand-core">Core:</label>
+            <input type="text" id="wand-core" name="wand-core" size="10" required>
+        </div>
+
+        <label for="familiar">Animal Familiar:</label>
+        <input type="text" id="familiar" name="familiar" size="10">
+
+        <br>
+
+        <label for="schoolbag">Schoolbag:</label>
+        <textarea type="text" id="schoolbag" name="schoolbag" size="10" required></textarea>
+    </div>
+
+    <div id="stats-section" class="section">
+        <h2>Stats</h2>
+        <table id="stats">
+            <tbody>
+                <tr>
+                    <td>
+                        <h4>Fight</h4>
+                        <input type="number" id="fight" name="fight" size="10" required>
+                        
+                        <br>
+                        
+                        <label for="fight-stat">Stat</label>
+                        <input type="number" id="fight-stat" name="fight-stat" size="10">
+
+                        <label for="fight-magic">Magic</label>
+                        <input type="number" id="fight-magic" name="fight-magic" size="10">
+                    </td>
+                    <td>
+                        <h4>Flight</h4>
+                        <input type="number" id="flight" name="flight" size="10" required>
+                        
+                        <br>
+                        
+                        <label for="flight-stat">Stat</label>
+                        <input type="number" id="flight-stat" name="flight-stat" size="10">
+
+                        <label for="flight-magic">Magic</label>
+                        <input type="number" id="flight-magic" name="flight-magic" size="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Brains</h4>
+                        <input type="number" id="brains" name="brains" size="10" required>
+                        
+                        <br>
+                        
+                        <label for="brains-stat">Stat</label>
+                        <input type="number" id="brains-stat" name="brains-stat" size="10">
+
+                        <label for="brains-magic">Magic</label>
+                        <input type="number" id="brains-magic" name="brains-magic" size="10">
+                    </td>
+                    <td>
+                        <h4>Brawn</h4>
+                        <input type="number" id="brawn" name="brawn" size="10" required>
+                        
+                        <br>
+                        
+                        <label for="brawn-stat">Stat</label>
+                        <input type="number" id="brawn-stat" name="brawn-stat" size="10">
+
+                        <label for="brawn-magic">Magic</label>
+                        <input type="number" id="brawn-magic" name="brawn-magic" size="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Charm</h4>
+                        <input type="number" id="charm" name="charm" size="10" required>
+                        
+                        <br>
+                        
+                        <label for="charm-stat">Stat</label>
+                        <input type="number" id="charm-stat" name="charm-stat" size="10">
+
+                        <label for="charm-magic">Magic</label>
+                        <input type="number" id="charm-magic" name="charm-magic" size="10">
+                    </td>
+                    <td>
+                        <h4>Grit</h4>
+                        <input type="number" id="grit" name="grit" size="10" required>
+                        
+                        <br>
+                        
+                        <label for="grit-stat">Stat</label>
+                        <input type="number" id="grit-stat" name="grit-stat" size="10">
+
+                        <label for="grit-magic">Magic</label>
+                        <input type="number" id="grit-magic" name="grit-magic" size="10">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+    <div id="adversity-tokens-section" class="section">
+        <h2>Adversity Tokens</h2>
+        <p>Begin the game with 3 adversity tokens. Add 1 each time you fail a roll.</p>
+        <input type="number" id="adversity-tokens" name="adversity-tokens" size="10" required>
+    </div>
+
+    <div id="strengths-section" class="section">
+        <h2>Strengths</h2>
+        <p>You start with your "grade strength" and two more.</p>
+        <textarea type="text" id="strengths" name="strengths" size="10" requied></textarea>
+    </div>
+
+    <div id="trope-questions-section" class="section">
+        <h2>Trope Questions</h2>
+        <p>Share these answers with the GM.</p>
+        <textarea type="text" id="trope-questions" name="trope-questions" size="10" requied></textarea>
+    </div>
+</body>
+</html>
