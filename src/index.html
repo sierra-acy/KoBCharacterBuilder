@@ -9,7 +9,7 @@
     <h1>Kids On Brooms Character Sheet Builder</h1>
 
     <label for="tropes">Trope:</label>
-        <select name="tropes" id="tropes" onchange="tropeSelect(this.options[this.selectedIndex].value)">
+    <select name="tropes" id="tropes" onchange="handleTropeSelect(this.options[this.selectedIndex].value)">
     </select>
         
     <br>
@@ -115,15 +115,7 @@
         <input type="number" id="age" name="age" size="10">
 
         <label for="year">Year:</label>
-        <select name="year" id="year" required>
-            <option value="first">First</option>
-            <option value="second">Second</option>
-            <option value="third">Third</option>
-            <option value="fourth">Fourth</option>
-            <option value="fifth">Fifth</option>
-            <option value="sixth">Sixth</option>
-            <option value="seventh">Seventh</option>
-            <option value="adult">Graduate/Adult</option>
+        <select name="year" id="year" required onchange="handleYearSelect(this.options[this.selectedIndex].value)">
         </select>
 
         <label for="grade-category">Grade Category:</label>
@@ -190,7 +182,10 @@
     <div id="strengths-section" class="section">
         <h2>Strengths</h2>
         <p>You start with your "grade strength" and two more.</p>
-        <textarea type="text" id="strengths" name="strengths" size="10" requied></textarea>
+        <select name="strength-1" id="strength-1" requied></select>
+        <p id="strength-1-effect" hidden="true">Effect:</p>
+        <select name="strength-2" id="strength-2" requied></select>
+        <p id="strength-2-effect" hidden="true">Effect:</p>
     </div>
 
     <div id="trope-questions-section" class="section">
