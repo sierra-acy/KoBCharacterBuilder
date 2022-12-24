@@ -405,7 +405,7 @@ const GradeCategories = {
     "underclassman": {
         "name": "Underclassman",
         "years": ["first", "second", "third", "fourth"],
-        "strength": "Innocence",
+        "strength": "innocence",
         "stats": {
             "charm": "+1",
             "fight": "+1"
@@ -414,7 +414,7 @@ const GradeCategories = {
     "upperclassman": {
         "name": "Upperclassman",
         "years": ["fifth", "sixth", "seventh"],
-        "strength": "Trained in...",
+        "strength": "trained-in",
         "stats": {
             "fight": "+1",
             "brawn": "+1"
@@ -423,7 +423,7 @@ const GradeCategories = {
     "faculty": {
         "name": "Faculty",
         "years":["adult"],
-        "strength":"Studied in...",
+        "strength":"studied-in",
         "stats": {
             "brains": "+1",
             "grit": "+1"
@@ -431,12 +431,41 @@ const GradeCategories = {
     },
     "none": {
         "name": "None",
-        "strength":""
+        "strength":"no-option"
     }
 };
 
+const StrengthOptions = [
+    {
+        "text": "",
+        "value": "no-option",
+        "selected": true
+    },
+    {
+        "text": "Innocence",
+        "value": "innocence"
+    },
+    {
+        "text": "Trained In...",
+        "value": "trained-in"
+    },
+    {
+        "text": "Studied In...",
+        "value": "studied-in"
+    }
+]
+
 const Strengths = {
-    "Innocence": "Once per session at the GM's discretion, you may spend 2 AT to convince an adult to not get you in trouble for a minor transgression.",
-    "Trained in...": "Choose one type of magic. Gain +1 to all spells of that type.",
-    "Studied in...": "Choose a type of magic that you are already Trained in. Gain +3 to all spells of that type. This bonus is not cumulative with the bonus for the Trained in... strength."
+    "innocence": {
+        "name": "Innocence",
+        "effect": "Once per session at the GM's discretion, you may spend 2 AT to convince an adult to not get you in trouble for a minor transgression."
+    },
+    "trained-in": {
+        "name": "Trained In...",
+        "effect": "Choose one type of magic. Gain +1 to all spells of that type."
+    },
+    "studied-in": {
+        "name": "Studied In...",
+        "effect": "Choose a type of magic that you are already Trained in. Gain +3 to all spells of that type. This bonus is not cumulative with the bonus for the Trained in... strength."
+    }
 }

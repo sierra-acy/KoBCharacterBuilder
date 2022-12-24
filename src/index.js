@@ -3,11 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
   init();
 });
 
+/* Initialize App State */
 function init() {
   initTropeOptions();
   initYearOptions();
+  initStrengthOptions();
 }
 
+/* Fill Trope dropdown */
 function initTropeOptions() {
   let optionList = document.getElementById("tropes").options;
   TropeOptions.forEach(option =>
@@ -17,6 +20,7 @@ function initTropeOptions() {
   );
 }
 
+/* Fill Year dropdown */
 function initYearOptions() {
   let optionList = document.getElementById("year").options;
   YearOptions.forEach(option =>
@@ -26,7 +30,24 @@ function initYearOptions() {
   );
 }
 
-function tropeSelect(selectedValue) {
+/* Fill Strength dropdown */
+function initStrengthOptions() {
+  let optionList1 = document.getElementById("strength-1").options;
+  let optionList2 = document.getElementById("strength-2").options;
+  StrengthOptions.forEach(option => {
+    optionList1.add(
+      new Option(option.text, option.value)
+    );
+    optionList2.add(
+      new Option(option.text, option.value)
+    );
+
+  });
+}
+
+/*** CLICK HANDLERS ***/
+/* Handle Trope dropdown selection */
+function handleTropeSelect(selectedValue) {
   const tropeData = TropeStats[selectedValue];
   const questionsField = document.getElementById("trope-questions");
   let questionContent;
@@ -41,10 +62,11 @@ function tropeSelect(selectedValue) {
   questionsField.value = questionContent;
 }
 
-function yearSelect(selectedValue) {
+/* Handle Year dropdown selection */
+function handleYearSelect(selectedValue) {
   const gradeCategoryField = document.getElementById("grade-category");
   let selectedGradeCategory = GradeCategories["none"];
-  let strengthName = "None";
+  let strength = "";
 
   if (GradeCategories["underclassman"]["years"].includes(selectedValue)) {
     selectedGradeCategory = GradeCategories["underclassman"];
@@ -56,11 +78,27 @@ function yearSelect(selectedValue) {
 
   gradeCategoryField.value = selectedGradeCategory["name"];
 
-  strengthName = selectedGradeCategory["strength"];  
-  strengthHandler(strengthName);
-  
+  strength = selectedGradeCategory["strength"];  
+  updateStrength("strength-1", strength);
 }
 
-function strengthHandler(strengthName) {
-  alert(`TODO: Update Strength to ${strengthName}`);
+
+/*** HELPER FUNCTIONS ***/
+/* update Strength dropdown with choice */
+function updateStrength(targetId, strength) {
+  const strengthSelect = document.getElementById(targetId);
+  const effectId = targetId + "-effect";
+  const strengthEffect = document.getElementById(effectId);
+
+  if(strength == "no-option") {
+    alert("Please choose 2 strengths.");
+    strengthSelect.value = "no-option";
+    strengthEffect.innerHTML = "";
+    strengthEffect.setAttribute("hidden");
+    
+  } else {
+    strengthSelect.value = strength;
+    strengthEffect.innerHTML = Strengths[strength]["effect"];
+    strengthEffect.removeAttribute("hidden");
+  }
 }
